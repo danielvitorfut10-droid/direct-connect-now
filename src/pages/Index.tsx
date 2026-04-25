@@ -42,12 +42,27 @@ const Index = () => {
         />
 
         <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center animate-fade-in">
+          {/* Foto Circular */}
+          <div className="mb-8 flex flex-col items-center">
+            <img 
+              src="/foto-suh.jpg" 
+              alt="Suh" 
+              className="h-28 w-28 rounded-full object-cover shadow-lg border-2 border-primary/50"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&q=80&w=200&h=200";
+              }}
+            />
+            <span className="mt-3 text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+              Promos da Suh
+            </span>
+          </div>
+
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
             <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
             Grupo VIP de Promoções
           </span>
 
-          <h1 className="font-display text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
+          <h1 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
             Promos <br />
             Da <br />
             <span className="text-gradient-primary">Suh 🧡</span>
@@ -61,7 +76,7 @@ const Index = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-primary px-10 py-5 text-base font-bold uppercase tracking-wider text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04] hover:shadow-glow animate-pulse-soft sm:text-lg"
+            className="orange-border group mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-black px-10 py-5 text-base font-bold uppercase tracking-wider text-white transition-transform duration-300 hover:scale-[1.04] sm:text-lg"
           >
             Entrar no Grupo
             <svg
