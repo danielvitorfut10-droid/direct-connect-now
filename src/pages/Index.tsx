@@ -49,7 +49,7 @@ const Index = () => {
 
           <h1 className="font-display text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
             Promos <br />
-            da <br />
+            Da <br />
             <span className="text-gradient-primary">Suh 🧡</span>
           </h1>
 
