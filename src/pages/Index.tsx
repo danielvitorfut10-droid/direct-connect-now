@@ -48,8 +48,9 @@ const Index = () => {
           </span>
 
           <h1 className="font-display text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
-            ENTRE NO GRUPO DE{" "}
-            <span className="text-gradient-primary">PROMOÇÕES</span> AGORA
+            Promos <br />
+            da <br />
+            <span className="text-gradient-primary">Suh 🧡</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
