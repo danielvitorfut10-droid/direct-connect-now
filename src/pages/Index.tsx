@@ -78,22 +78,72 @@ const Index = () => {
             Entrar no Grupo
           </a>
 
-          {/* Reforço CTA */}
-          <div className="mt-16 flex flex-col items-center">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-muted-foreground">
-              Não fica de fora
-            </p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center justify-center rounded-full border border-primary/40 bg-transparent px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-foreground transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              Quero Entrar
-            </a>
-          </div>
         </div>
       </main>
+
+      {/* Seção do Carrossel */}
+      <section className="relative w-full overflow-hidden py-20 bg-secondary/10">
+        <div className="mx-auto max-w-4xl text-center px-6 mb-12 animate-fade-in">
+          <h2 className="text-3xl font-display font-bold leading-tight sm:text-4xl md:text-5xl">
+            Quer pegar a próxima dessas? <br />
+            <span className="text-gradient-primary mt-2 block">
+              Entra no grupo
+            </span>
+          </h2>
+        </div>
+
+        {/* Carrossel Infinito */}
+        <div className="relative flex w-full overflow-hidden py-6">
+          <div className="flex w-max animate-marquee gap-4 sm:gap-6 whitespace-nowrap px-4 sm:px-6 hover:[animation-play-state:paused]">
+            {/* Lista 1 */}
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div 
+                key={item} 
+                className="group relative h-[320px] w-[220px] sm:h-[400px] sm:w-[280px] shrink-0 rounded-2xl bg-secondary/40 overflow-hidden border border-border shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
+                  <svg className="w-12 h-12 mb-3 opacity-40 transition-opacity group-hover:opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-sm font-semibold tracking-wider uppercase opacity-60">Foto {item}</span>
+                  <span className="text-xs mt-1 opacity-40 capitalize">Espaço para Imagem</span>
+                </div>
+              </div>
+            ))}
+            {/* Cópia para formar o loop perfeito */}
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div 
+                key={`copy-${item}`} 
+                className="group relative h-[320px] w-[220px] sm:h-[400px] sm:w-[280px] shrink-0 rounded-2xl bg-secondary/40 overflow-hidden border border-border shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
+                  <svg className="w-12 h-12 mb-3 opacity-40 transition-opacity group-hover:opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-sm font-semibold tracking-wider uppercase opacity-60">Foto {item}</span>
+                  <span className="text-xs mt-1 opacity-40 capitalize">Espaço para Imagem</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Sombras laterais para dar ideia de continuidade */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background via-background/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background via-background/80 to-transparent" />
+        </div>
+
+        {/* Botão de reforço embaixo do carrossel */}
+        <div className="mt-14 flex justify-center">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="orange-border relative w-auto min-w-[200px] h-14 inline-flex items-center justify-center gap-2.5 px-8 bg-black rounded-xl border-none text-white cursor-pointer font-black uppercase tracking-wider transition-all duration-200 sm:text-lg"
+          >
+            Entrar no Grupo
+          </a>
+        </div>
+      </section>
 
       {/* Footer minimalista */}
       <footer className="border-t border-border/60 px-6 py-6 text-center text-xs text-muted-foreground">
