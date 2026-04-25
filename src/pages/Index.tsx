@@ -45,16 +45,13 @@ const Index = () => {
           {/* Foto Circular */}
           <div className="mb-8 flex flex-col items-center">
             <img 
-              src="/foto-suh.jpg" 
+              src="/foto-suh.jpg.jpeg" 
               alt="Suh" 
-              className="h-28 w-28 rounded-full object-cover shadow-lg border-2 border-primary/50"
+              className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 rounded-full object-cover shadow-lg border-2 border-primary/50"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&q=80&w=200&h=200";
               }}
             />
-            <span className="mt-3 text-sm font-semibold tracking-wide text-muted-foreground uppercase">
-              Promos da Suh
-            </span>
           </div>
 
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
@@ -62,7 +59,7 @@ const Index = () => {
             Grupo VIP de Promoções
           </span>
 
-          <h1 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
+          <h1 className="font-display text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
             Promos <br />
             Da <br />
             <span className="text-gradient-primary">Suh 🧡</span>
@@ -76,22 +73,9 @@ const Index = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="orange-border group mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-black px-10 py-5 text-base font-bold uppercase tracking-wider text-white transition-transform duration-300 hover:scale-[1.04] sm:text-lg"
+            className="orange-border relative mt-10 w-auto min-w-[200px] h-14 inline-flex items-center justify-center gap-2.5 px-8 bg-black rounded-xl border-none text-white cursor-pointer font-black uppercase tracking-wider transition-all duration-200 sm:text-lg"
           >
             Entrar no Grupo
-            <svg
-              className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden
-            >
-              <path d="M5 12h14" />
-              <path d="m13 5 7 7-7 7" />
-            </svg>
           </a>
 
           {/* Reforço CTA */}
